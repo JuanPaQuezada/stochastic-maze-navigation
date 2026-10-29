@@ -95,8 +95,13 @@ class Map:
         self.ocupancy_grid[self.goal[1]][self.goal[0]]=1.0
         return self.ocupancy_grid
 
+    def print_map(self):
+        for row in self.ocupancy_grid:
+            print(' '.join(['#' if cell==float('inf') else '.' for cell in row]))
+            # use '#' for walls and '.' for free space    
 
 map = Map(width=50, height=50, density_rate=0.3, hardness_rate=0.5, start=(0, 0), goal=(49, 49), seed=42)
-print(map.generate_map())
+map.generate_map()
+map.print_map()
 
 
