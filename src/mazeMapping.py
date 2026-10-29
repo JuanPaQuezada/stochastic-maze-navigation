@@ -1,5 +1,6 @@
 import random
 import zlib
+import time
 def space_hashing(x,y, density, seed):
     random.seed(seed)
     #cordinates of the cell 
@@ -87,6 +88,9 @@ class Map:
            applying the space hashing function and making sure
            the path 
         '''
+        #generate pseudorandom seed with time 
+        dinamic_seed=int(time.thread_time_ns()//100)
+        self.seed=dinamic_seed
         for y in range(self.height):
             for x in range(self.width):
                 self.ocupancy_grid[y][x]=space_hashing(x,y,self.density_rate,self.seed)
