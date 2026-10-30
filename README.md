@@ -71,3 +71,5 @@ flowchart TD
     M2_HVH --> M4_METRICS
     M4_METRICS --> END
 ```
+
+To generate the pseudorandom maze dynamically, the `generate_map` method uses Python's `time` library to create a seed from `time.thread_time_ns()`. This value is assigned to `self.seed`, allowing each maze generation to use a different time-based seed while preserving deterministic spatial hashing and corridor generation for that specific maze.
