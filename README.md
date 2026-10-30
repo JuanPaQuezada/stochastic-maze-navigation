@@ -10,6 +10,9 @@ This procedure generates values that appear random while remaining reproducible 
 The `get_cell_cost` function adds an important exception to the probabilistic model: positions belonging to `carved_corridors` always receive a cost of `1.0`, even if the hash would otherwise classify them as obstacles or high-cost terrain. This guarantees that the generated maze contains traversable routes for the navigation algorithms.
 
 From a scientific perspective, the design separates two processes with different purposes: *spatial hashing* deterministically controls the distribution of obstacles, while the path-carving process guarantees connectivity and solvability. This combination provides both stochastic variability and reproducible experiments.
+<p align="center">
+    <img width="1080" height="1009" alt="image" src="https://github.com/user-attachments/assets/fc97a803-733a-498f-b10b-a83800ac1200" />
+</p>
 
 ```mermaid
 flowchart TD
