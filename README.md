@@ -11,7 +11,7 @@ The `get_cell_cost` function adds an important exception to the probabilistic mo
 
 From a scientific perspective, the design separates two processes with different purposes: *spatial hashing* deterministically controls the distribution of obstacles, while the path-carving process guarantees connectivity and solvability. This combination provides both stochastic variability and reproducible experiments.
 <p align="center">
-    <img width="1080" height="1009" alt="image" src="https://github.com/user-attachments/assets/fc97a803-733a-498f-b10b-a83800ac1200" />
+    <img width="1030" height="959" alt="image" src="https://github.com/user-attachments/assets/fc97a803-733a-498f-b10b-a83800ac1200" />
 </p>
 
 ```mermaid
