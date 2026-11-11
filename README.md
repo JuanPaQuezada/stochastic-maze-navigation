@@ -10,6 +10,14 @@ The navigation cost includes a preference for paths that preserve one free cell 
 
 A penalty is added to candidates without the preferred clearance. This penalty does not make narrow passages impossible; it only makes them less attractive than equivalent paths that maintain one cell of separation. As a result, the planner avoids walls whenever possible while preserving the ability to find a valid path through constrained areas.
 
+<p align="center">
+<img width="988" height="607" alt="image" src="https://github.com/user-attachments/assets/43b11dda-1ac5-4ae0-8f52-66839e4d43b0" />
+</p>
+
+<p align="center">
+<img width="987" height="611" alt="image" src="https://github.com/user-attachments/assets/8221db73-029e-436c-a46d-9d2f91ed7a9c" />
+</p>
+
 ## Spatial Generation and Computational Cost Reduction
 
 The `Map` class implements the representation and generation of the navigation environment through a stochastic occupancy grid. Instead of determining the state of each cell using a sequential random process, the system uses spatial hashing to calculate each cell's value independently based on its position and a seed.
